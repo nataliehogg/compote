@@ -20,7 +20,7 @@ class Plot:
         :return None:
         """
 
-        fig, ax = plt.subplots(1, 1, figsize=(12,7))
+        fig, ax = plt.subplots(1, 1, figsize=(7,5))
 
         if title is not None:
             ax.set_title(r'{}'.format(title))
