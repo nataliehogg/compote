@@ -13,35 +13,34 @@ $c_n(\theta) = \frac{1}{2\pi} \int_0^{2\pi} \mathrm{d} \varphi e^{-in\varphi} \p
 
 ## Usage
 
-First import and instantiate the potential whose coefficients you wish to calculate, passing its parameter values:
+First import and instantiate the potential whose coefficients you wish to calculate:
 ```
 from compote.potentials.epl import EPL
 
-phi = 0.8
-theta = 1
-f = 7/8
-theta_E = 1
-gamma = 2
-
-epl = EPL(phi, theta, f, theta_E, gamma)
+epl = EPL()
 ```
 
-Then, import and instantiate the Calculate class, pass the number of orders to be computed and get the result:
+Then, import and instantiate the Calculate class, pass the number of orders to be computed along with the arguments for the potential function, and get the result:
 ```
 from compote.calculate.calculate import Calculate
 
-c = Calculate()
+calc = Calculate()
+
+theta = 1   # radial coordinate; result is independent of this
+f = 7/8     # axis ratio of ellipse
+theta_E = 1 # Einstein radius; result is independent of this
+gamma = 2   # slope of the power law
 
 orders = range(0, 12)
 
-c_epl, error_epl = c.coefficients(epl.potential, orders, theta, f, theta_E, gamma)
+c_epl, error_epl = calc.coefficients(epl.potential, orders, theta, f, theta_E, gamma)
 ```
 
 You can view the results as a `pandas` dataframe or as a LaTeX table for convenience:
 ```
-dataframe = c.results_dataframe(c_epl, error_epl, orders)
+dataframe = calc.results_dataframe(c_epl, error_epl, orders)
 
-latex = c.results_dataframe(c_epl, error_epl, orders, to_latex=True)
+latex = calc.results_dataframe(c_epl, error_epl, orders, to_latex=True)
 
 print(dataframe)
 
@@ -52,11 +51,11 @@ And lastly you can plot your results with the Plot class:
 ```
 from compote.plots.plots import Plot
 
-p = Plot()
+plt = Plot()
 
 plot_kwargs = {'color': 'maroon', 'ls': ' ', 'marker': 'x', 'label': 'EPL'}
 
-p.coefficient_plot(c_epl, orders, plot_kwargs,  title='my amazing compote plot')
+plt.coefficient_plot(c_epl, orders, plot_kwargs,  title='my amazing compote plot')
 ```
 
 An example notebook demonstrating how to use `compote` can be found [here](https://github.com/nataliehogg/compote/blob/main/example_notebook.ipynb).
