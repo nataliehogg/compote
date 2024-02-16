@@ -4,7 +4,7 @@ The `compote` package computes the coefficients of the multipolar expansion of a
 
 ![pika-1708114906974-1x](https://github.com/nataliehogg/compote/assets/32572654/6cca71d4-9367-412d-a5cd-49ab6e7563ee)
 
-The difference between the first thirteen coefficients of an elliptical power law (EPL) lensing potential and a singular isothermal ellipse (SIE) lensing potential for different values of the axis ratio $f$, computed and plotted with `compote`. When $f\rightarrow 1$, the singular isothermal sphere is recovered.
+Figure: the difference between the first thirteen coefficients of an elliptical power law (EPL) lensing potential and a singular isothermal ellipse (SIE) lensing potential for different values of the axis ratio $f$, computed and plotted with `compote`. When $f\rightarrow 1$, the singular isothermal sphere is recovered.
 
 ## Physics
 
