@@ -44,13 +44,9 @@ class Calculate:
         :param to_latex: Bool, if True, prints the resulting dataframe as a LaTeX table.
         """
 
-        potential_dict = {'c_n': result, 'error': error}
-
-        potential_df = pd.DataFrame(potential_dict, index=orders)
-
         if to_latex == True:
-            potential_df = potential_df.to_latex()
+            potential_df = pd.DataFrame({'Order': orders, '$c_n$': result, 'Error': error}).to_latex(index=False, float_format="%.2e")
         else:
-            pass
+            potential_df = pd.DataFrame({'c_n': result, 'error': error}, index=orders)
 
         return potential_df

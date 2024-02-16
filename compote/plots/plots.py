@@ -20,7 +20,7 @@ class Plot:
         :return None:
         """
 
-        fig, ax = plt.subplots(1, 1, figsize=(7,5))
+        fig, ax = plt.subplots(1, 1, figsize=(8,4))
 
         if title is not None:
             ax.set_title(r'{}'.format(title))
@@ -30,7 +30,7 @@ class Plot:
         ax.plot(orders, coeffs, **kwargs)
 
         ax.set_xlabel(r'$n$')
-        ax.set_ylabel(r'$c_n(\theta=1)$')
+        ax.set_ylabel(r'$c_n$')
 
         ax.legend()
 
