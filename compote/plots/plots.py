@@ -12,6 +12,13 @@ class Plot:
         pass
 
     def coefficient_plot(self, coeffs, orders, kwargs, title=None):
+        """
+        This function plots the coefficients as a function of their order.
+        :param coeffs: a list or array of multipole coefficients
+        :param orders: a list of orders at which the coefficients were computed
+        :param kwargs: plotting kwargs
+        :return None:
+        """
 
         fig, ax = plt.subplots(1, 1, figsize=(12,7))
 
@@ -31,7 +38,18 @@ class Plot:
 
         return None
 
-    def difference_plot(self, coeffs1, coeffs2, orders, kwargs1, kwargs2, kwargsdiff, title=None):
+    def difference_plot(self, coeffs1, coeffs2, orders,
+                        kwargs1, kwargs2, kwargsdiff, title=None):
+        """
+        This function plots the coefficients of two different profiles as a function of their order, along with the absolute difference.
+        :param coeffs1: a list or array of multipole coefficients for the first profile
+        :param coeffs2: a list or array of multipole coefficients for the second profile
+        :param orders: a list of orders at which the coefficients were computed
+        :param kwargs1: plotting kwargs for the first profile coefficients
+        :param kwargs2: plotting kwargs for the second profile coefficients
+        :param kwargsdiff: plotting kwargs for the difference between the first and second profile coefficients
+        :return None:
+        """
 
         difference = np.abs(np.subtract(coeffs1, coeffs2))
 

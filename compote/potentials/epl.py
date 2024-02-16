@@ -1,9 +1,17 @@
 import numpy as np
 from scipy.special import hyp2f1
 
+
 class EPL:
 
     def __init__(self, phi, theta, f, theta_E, gamma):
+        """
+        :param phi: angular coordinate
+        :param theta: radial coordinate
+        :param f: axis ratio (between 0 and 1)
+        :param theta_E: Einstein radius
+        :param gamma: index of the power law
+        """
         self.phi = phi
         self.theta = theta
         self.f = f
@@ -11,11 +19,16 @@ class EPL:
         self.gamma = gamma
 
     def potential(self, phi, theta, f, theta_E, gamma, *args):
-        '''
-        EPL potential from Tessore and Metcalf 2015, eqn 14 with coordinate transformation given in eqn 5
-        Their R is my theta and their \varphi is my phi
-        https://arxiv.org/pdf/1507.01819.pdf
-        '''
+        """
+        EPL potential from Tessore and Metcalf 2015 (https://arxiv.org/abs/1507.01819), eqn 14 with coordinate transformation given in eqn 5
+        Their R is my theta and their \varphi is my phi.
+        :param phi: angular coordinate
+        :param theta: radial coordinate
+        :param f: axis ratio (between 0 and 1)
+        :param theta_E: Einstein radius
+        :param gamma: index of the power law
+        :return: The EPL potential evaluated at the given values
+        """
         b = self.theta_E*np.sqrt(self.f)
         t = self.gamma-1
         prefactor = 1/(2-t)
