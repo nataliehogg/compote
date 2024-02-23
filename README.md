@@ -2,7 +2,7 @@
 
 The `compote` package computes the coefficients of the multipolar expansion of a lensing potential.
 
-![pika-1708683130028-1x](https://github.com/nataliehogg/compote/assets/32572654/61dc5e57-0226-4c4c-8d81-ad5b1c5c8d11)
+![pika-1708683617012-1x](https://github.com/nataliehogg/compote/assets/32572654/b7c89770-2366-437c-bc94-7f7851da77ee)
 
 Figure: even coefficients of the singular isothermal sphere (SIE) and the elliptical power law (EPL) lensing potential for different values of the axis ratio $f$, computed and plotted with `compote`. When $f\rightarrow 1$, the singular isothermal sphere is recovered.
 
