@@ -53,7 +53,7 @@ from compote.plots.plots import Plot
 
 plt = Plot()
 
-plot_kwargs = {'color': 'maroon', 'ls': ' ', 'marker': 'x', 'label': 'EPL'}
+plot_kwargs = {'color': 'crimson', 'ls': ' ', 'marker': 'x', 'label': 'EPL'}
 
 plt.coefficient_plot(c_epl, orders, plot_kwargs,  title='my amazing compote plot')
 ```
