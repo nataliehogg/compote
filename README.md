@@ -2,9 +2,9 @@
 
 The `compote` package computes the coefficients of the multipolar expansion of a lensing potential.
 
-![pika-1708114906974-1x](https://github.com/nataliehogg/compote/assets/32572654/6cca71d4-9367-412d-a5cd-49ab6e7563ee)
+![pika-1708683617012-1x](https://github.com/nataliehogg/compote/assets/32572654/b7c89770-2366-437c-bc94-7f7851da77ee)
 
-Figure: the difference between the first thirteen coefficients of an elliptical power law (EPL) lensing potential and a singular isothermal ellipse (SIE) lensing potential for different values of the axis ratio $f$, computed and plotted with `compote`. When $f\rightarrow 1$, the singular isothermal sphere is recovered.
+Figure: even coefficients of the singular isothermal sphere (SIE) and the elliptical power law (EPL) lensing potential for different values of the axis ratio $f$, computed and plotted with `compote`. When $f\rightarrow 1$, the singular isothermal sphere is recovered.
 
 ## Physics
 
@@ -53,7 +53,7 @@ from compote.plots.plots import Plot
 
 plt = Plot()
 
-plot_kwargs = {'color': 'maroon', 'ls': ' ', 'marker': 'x', 'label': 'EPL'}
+plot_kwargs = {'color': 'crimson', 'ls': ' ', 'marker': 'x', 'label': 'EPL'}
 
 plt.coefficient_plot(c_epl, orders, plot_kwargs,  title='my amazing compote plot')
 ```
