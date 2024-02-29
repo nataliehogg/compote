@@ -69,7 +69,7 @@ class Plot:
 
         ax[1].set_xlabel(r'$n$')
 
-        ax[0].set_ylabel(r'$c_n(\theta=1)$')
+        ax[0].set_ylabel(r'$c_n$')
         ax[1].set_ylabel(r'$|c_{n, 1} - c_{n,2}|$')
 
         ax[0].legend()
